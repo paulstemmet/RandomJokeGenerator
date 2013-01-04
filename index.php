@@ -2,6 +2,7 @@
 
 //Include the Shinka Publisher Library
 include_once("shinka-publisher-lib-php/ShinkaBannerAd.php"); 
+include_once("analyticstracking.php");
 
 
 // Create shinka banner ad object. Can be done at top of page, and re-used to display multiple banners on page.
@@ -14,7 +15,7 @@ print $ShinkaBannerAd->generateHTMLFromAd();
 
 print '<br/>Welcome to the Random Joke Generator<br/>';
 ?>
-<img src="./images/image_<?php $random = rand(1,3); echo $random; ?>.jpg" alt="[ Random Image ]" height="128" width="128" />
+<img src="./images/image_<?php $random = rand(1,8); echo $random; ?>.jpg" alt="[ Random Image ]" height="128" width="128" />
 
 <?php
 print '<br/>Welcome to the Random Joke Generator<br/>';
