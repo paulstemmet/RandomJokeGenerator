@@ -1,8 +1,15 @@
+
 <?php
 
 //Include the Shinka Publisher Library
 include_once("shinka-publisher-lib-php/ShinkaBannerAd.php"); 
-include_once("analyticstracking.php");
+include_once("GoogleAnalyticsforMobile/php/ga.php"); 
+include_once("GoogleAnalyticsforMobile/php/php1.snippet"); 
+
+
+$googleAnalyticsImageUrl = googleAnalyticsGetImageUrl();
+echo '<img src="' . $googleAnalyticsImageUrl . '" />';
+
 
 
 // Create shinka banner ad object. Can be done at top of page, and re-used to display multiple banners on page.
