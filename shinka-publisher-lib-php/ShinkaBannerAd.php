@@ -40,13 +40,14 @@ class ShinkaBannerAd
 	{
 		$mxitUser = new MxitUser();
 		$tempAge = $mxitUser->getAge();
-		$this->_requestParam_age = floor($tempAge);		
+		//$this->_requestParam_age = floor($tempAge);
+                $this->_requestParam_age = 25;
 		$this->_requestParam_gender = ($mxitUser->getGender() == 1)?'male':'female';		
 		$this->_requestParam_device = $mxitUser->getDeviceUserAgent();
 		$this->_requestParam_deviceWidth = $mxitUser->getDeviceWidth();
 		$this->_requestParam_country = $mxitUser->getCurrentCountryId();		
-		//$this->_requestParam_xid = $mxitUser->getMxitUserId();	
-                $this->_requestParam_xid = TESTUSER;	
+		$this->_requestParam_xid = $mxitUser->getMxitUserId();	
+                //$this->_requestParam_xid = TESTUSER;	
 		$this->_clientDeviceIP = $_SERVER['HTTP_X_FORWARDED_FOR'];	
 
 		//Decide which AdUnitID to use based on the user device width:
@@ -84,7 +85,7 @@ class ShinkaBannerAd
 							'xid' => $this->_requestParam_xid,
 							);
 			
-                if ($this->_requestParam_xid == TESTUSER) print 'UserAge ' . $this->_requestParam_age. '<br/>';
+                //print 'UserAge ' . $this->_requestParam_age. '<br/>';
                 
 		$BannerRequest['auid'] = $this->_adUnitIDToUse;
 			
