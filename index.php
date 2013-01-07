@@ -12,9 +12,6 @@ include_once("shinka-publisher-lib-php/MxitUser.php");
 $googleAnalyticsImageUrl = googleAnalyticsGetImageUrl();
 
 
-$mxitUser = new MxitUser();
-$Username = $mxitUser->getMxitUserId();
-
 // Create shinka banner ad object. Can be done at top of page, and re-used to display multiple banners on page.
 $ShinkaBannerAd = new ShinkaBannerAd();	
 	
@@ -29,8 +26,8 @@ print '<br/>...Welcome to the Random Joke Generator<br/>';
 ?>
 <img src="./images/image_<?php $random = rand(1,11); echo $random; ?>.jpg" alt="[ Random Image ]" height="128" width="128" />
 
-<img src="<?= $googleAnalyticsImageUrl ?>" />
-Testing: <?= $googleAnalyticsImageUrl ?>
+
+
 
 <?php
 
@@ -41,6 +38,7 @@ $ShinkaBannerAd->doServerAdRequest();
 // Get HTML that should be displayed for this banner:
 print '<br/>';
 print $ShinkaBannerAd->generateHTMLFromAd();
+echo '<img src="' . $googleAnalyticsImageUrl . '" />';
 print '<br/>';
 
 ?>
