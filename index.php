@@ -2,10 +2,11 @@
 <?php
 
 //Include the Shinka Publisher Library
+//include_once("GoogleAnalyticsforMobile/php/ga.php"); 
+include_once("GoogleAnalyticsforMobile/php/php1.snippet");
 include_once("shinka-publisher-lib-php/ShinkaBannerAd.php"); 
 include_once("shinka-publisher-lib-php/MxitUser.php");
-include_once("GoogleAnalyticsforMobile/php/ga.php"); 
-include_once("GoogleAnalyticsforMobile/php/php1.snippet"); 
+ 
 
 
 $googleAnalyticsImageUrl = googleAnalyticsGetImageUrl();
