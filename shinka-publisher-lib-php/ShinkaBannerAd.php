@@ -76,7 +76,8 @@ class ShinkaBannerAd
 	public function doServerAdRequest()
     {
 		$BannerRequest = array(
-							'c.age' => $this->_requestParam_age,
+							//'c.age' => $this->_requestParam_age,
+                                                        'c.age' => 25,
 							'c.gender' => $this->_requestParam_gender,
 							'c.device' => $this->_requestParam_device,
 							'c.country' => $this->_requestParam_country,
