@@ -3,6 +3,7 @@
 
 //Include the Shinka Publisher Library
 include_once("shinka-publisher-lib-php/ShinkaBannerAd.php"); 
+include_once("shinka-publisher-lib-php/MxitUser.php");
 //include_once("GoogleAnalyticsforMobile/php/ga.php"); 
 //include_once("GoogleAnalyticsforMobile/php/php1.snippet"); 
 
@@ -27,6 +28,7 @@ print '<br/>...Welcome to the Random Joke Generator<br/>';
 <?php
 print '<br/>Welcome to the Random Joke Generator<br/>';
 
+
 // Do a server ad request to populate the BannerAd object with a new banner. This can be done multiple times with the same ShinkaBannerAd object to get new banners for the same user:
 $ShinkaBannerAd->doServerAdRequest();
 // Get HTML that should be displayed for this banner:
@@ -34,5 +36,6 @@ print $ShinkaBannerAd->generateHTMLFromAd();
 
 ?>
 
+<a href="index.html">Home</a> 
 
 
