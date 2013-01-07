@@ -3,12 +3,12 @@
 
 //Include the Shinka Publisher Library
 include_once("shinka-publisher-lib-php/ShinkaBannerAd.php"); 
-include_once("GoogleAnalyticsforMobile/php/ga.php"); 
-include_once("GoogleAnalyticsforMobile/php/php1.snippet"); 
+//include_once("GoogleAnalyticsforMobile/php/ga.php"); 
+//include_once("GoogleAnalyticsforMobile/php/php1.snippet"); 
 
 
-$googleAnalyticsImageUrl = googleAnalyticsGetImageUrl();
-echo '<img src="' . $googleAnalyticsImageUrl . '" />';
+//$googleAnalyticsImageUrl = googleAnalyticsGetImageUrl();
+//echo '<img src="' . $googleAnalyticsImageUrl . '" />';
 
 
 
@@ -20,9 +20,9 @@ $ShinkaBannerAd->doServerAdRequest();
 // Get HTML that should be displayed for this banner:
 print $ShinkaBannerAd->generateHTMLFromAd();
 
-print '<br/>Welcome to the Random Joke Generator<br/>';
+print '<br/>...Welcome to the Random Joke Generator<br/>';
 ?>
-<img src="./images/image_<?php $random = rand(1,8); echo $random; ?>.jpg" alt="[ Random Image ]" height="128" width="128" />
+<img src="./images/image_<?php $random = rand(1,11); echo $random; ?>.jpg" alt="[ Random Image ]" height="128" width="128" />
 
 <?php
 print '<br/>Welcome to the Random Joke Generator<br/>';
