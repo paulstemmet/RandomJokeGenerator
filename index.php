@@ -24,7 +24,7 @@ print $ShinkaBannerAd->generateHTMLFromAd();
 print '<br/>Hi ' . $Username . '<br/>';
 print '<br/>...Welcome to the Random Joke Generator<br/>';
 ?>
-<img src="./images/image_<?php $random = rand(1,11); echo $random; ?>.jpg" alt="[ Random Image ]" height="250" width="1250" />
+<img src="./images/image_<?php $random = rand(1,11); echo $random; ?>.jpg" alt="[ Random Image ]" height="250" width="250" />
 
 
 
